@@ -8,8 +8,8 @@ map r rotate
 map R reload
 
 set default-bg 			"#141a21"
-set recolor-lightcolor		"#FFFFFF"
-set recolor-darkcolor 		"#141a21"
+set recolor-darkcolor		"#FFFFFF"
+set recolor-lightcolor		"#141a21"
 set statusbar-fg 		"#FFFFFF"
 set statusbar-bg		"#141a21"
 set inputbar-fg 		"#FFFFFF"

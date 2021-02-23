@@ -4,6 +4,7 @@
 # |  _| \__ \ | | | | | (__ 
 # |_| |_|___/_| |_|_|  \___|
                  
+# Variables
 set fish_greeting
 set terminal "alacritty"
 set TERM "xterm-256color"
@@ -17,10 +18,17 @@ alias ls=exa
 alias list='exa -l'
 alias la='exa -a'
 alias gs='git status'
+alias nf=neofetch
+alias stow='stow -t ~'
+
+# Shortcut aliases
+alias ..='cd ..'
 alias fishrc='$editor ~/.config/fish/config.fish'
 alias nvimrc='$editor ~/.config/nvim/init.vim'
-alias ..='cd ..'
-alias nf=neofetch
+alias alacritty.yml='$editor ~/.config/alacritty/alacritty.yml'
 
+# Random shell color script on startup
 colorscript -r 
+
+# Initialize the Starship shell prompt
 starship init fish | source
