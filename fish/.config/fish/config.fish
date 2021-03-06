@@ -15,7 +15,7 @@ set browser "librewolf"
 # Aliases
 alias vim=nvim
 alias ls=exa
-alias list='exa -l'
+alias ll='exa -l'
 alias la='exa -a'
 alias gs='git status'
 alias nf=neofetch
@@ -28,7 +28,7 @@ alias nvimrc='$editor ~/.config/nvim/init.vim'
 alias alacritty.yml='$editor ~/.config/alacritty/alacritty.yml'
 
 # Random shell color script on startup
-colorscript -r 
+
 
 # Initialize the Starship shell prompt
 starship init fish | source
