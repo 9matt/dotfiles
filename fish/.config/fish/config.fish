@@ -6,7 +6,7 @@
                  
 # Variables
 set fish_greeting
-set terminal "alacritty"
+set terminal "urxvtc"
 set TERM "xterm-256color"
 set editor "nvim"
 set reader "zathura"
@@ -27,8 +27,13 @@ alias fishrc='$editor ~/.config/fish/config.fish'
 alias nvimrc='$editor ~/.config/nvim/init.vim'
 alias alacritty.yml='$editor ~/.config/alacritty/alacritty.yml'
 
+# Gentoo shortcuts
+alias make.conf='sudo $editor /etc/portage/make.conf'
+
+
+
 # Random shell color script on startup
-colorscript -r 
+# colorscript -r 
 
 # Initialize the Starship shell prompt
 starship init fish | source
