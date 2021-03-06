@@ -33,11 +33,7 @@ alias make.conf='sudo $editor /etc/portage/make.conf'
 
 
 # Random shell color script on startup
-<<<<<<< HEAD
 # colorscript -r 
-=======
-
->>>>>>> b25fcc14af2bc237d92f6b2434ea1d65fea0cb33
 
 # Initialize the Starship shell prompt
 starship init fish | source
