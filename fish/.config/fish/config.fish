@@ -31,6 +31,10 @@ alias alacritty.yml='$editor ~/.config/alacritty/alacritty.yml'
 alias make.conf='sudo $editor /etc/portage/make.conf'
 
 
+# startx window manager aliases
+alias dwm='WM=dwm startx'
+alias spectrwm='WM=spectrwm startx'
+alias sp='WM=spectrwm startx'
 
 # Random shell color script on startup
 # colorscript -r 
