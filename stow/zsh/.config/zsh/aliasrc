@@ -28,6 +28,7 @@ alias zshrc="$EDITOR ~/.config/zsh/.zshrc"
 alias aliases="$EDITOR ~/.config/zsh/aliasrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias alacritty.yml="$EDITOR ~/.config/alacritty/alacritty.yml"
+alias termiterc="$EDITOR ~/.config/termite/config"
 alias make.conf="sudo $EDITOR /etc/portage/make.conf"
 
 # Youtube-dl

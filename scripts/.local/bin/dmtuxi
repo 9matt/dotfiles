@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+while [ -z "$query" ]; do
+    query=$(echo "tuxi" | dmenu -p 'Enter search query:') "$@" || exit
+done
+
+# Pass the query to tuxi
+# (requires tuxi and its dependencies)
+output=$(tuxi -r $query)
+
+notify-send "$output"

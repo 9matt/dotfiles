@@ -17,7 +17,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Default programs and .local/bin
-export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
 export BROWSER="librewolf"
 export READER="zathura"
@@ -48,7 +48,7 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
-# Use lf to switch directories and bind it to ctrl-o
+# Use lf to switch directories and bind it to ctrl-f
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
@@ -61,6 +61,7 @@ lfcd () {
 bindkey -s '^f' 'lfcd\n'
 
 # Load the Starship prompt, autosuggestions and syntax highlighting
+colorscript -r | tail -n +2
 eval "$(starship init zsh)"
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh || echo "install zsh autosuggestions"
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || echo "install zsh syntax highlighting"

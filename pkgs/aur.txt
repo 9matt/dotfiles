@@ -1,0 +1,12 @@
+lf
+librewolf-bin
+moc-pulse
+mocp-themes-git
+neovim-plug
+nerd-fonts-mononoki
+pa-applet-git
+picom-jonaburg-git
+starship
+exa
+id3
+ttf-joypixels
