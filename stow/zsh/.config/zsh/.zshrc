@@ -7,14 +7,16 @@
 # Sets
 setopt autocd
 stty stop undef	
-HISTSIZE=10000000
-SAVEHIST=10000000
-HISTFILE=~/.cache/zsh/history
 export KEYTIMEOUT=1
 
 # Setting locales to fix artifacts
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# History
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTFILE=~/.cache/zsh/history
 
 # Default programs and .local/bin
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
@@ -60,8 +62,13 @@ lfcd () {
 }
 bindkey -s '^f' 'lfcd\n'
 
-# Load the Starship prompt, autosuggestions and syntax highlighting
+# Load the Starship prompt + a random color script
 colorscript -r | tail -n +2
 eval "$(starship init zsh)"
-source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh || echo "install zsh autosuggestions"
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || echo "install zsh syntax highlighting"
+
+# Auto Suggestions
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# Syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
