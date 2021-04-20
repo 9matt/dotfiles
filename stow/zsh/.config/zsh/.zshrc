@@ -64,7 +64,7 @@ bindkey -s '^f' 'lfcd\n'
 
 # Vimb with tabbed opens an url
 tvb() {
-tabbed vimb "$1" -e
+tabbed -c vimb "$1" -e
 }
 
 # Load the Starship prompt + a random color script

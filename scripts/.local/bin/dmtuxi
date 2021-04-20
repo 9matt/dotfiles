@@ -2,11 +2,21 @@
 
 
 while [ -z "$query" ]; do
-    query=$(echo "tuxi" | dmenu -p 'Enter search query:') "$@" || exit
+    query=$(echo "[" | dmenu -p 'Enter search query:') "$@" || exit
 done
 
 # Pass the query to tuxi
 # (requires tuxi and its dependencies)
-output=$(tuxi -r $query)
+case $query in
+
+	[)
+	exit
+	;;
+
+	*)
+	output=$(tuxi -r $query)
+	;;
+
+esac
 
 notify-send "$output"
